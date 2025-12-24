@@ -141,17 +141,17 @@ export default function StockChart({ data }: { data?: any[] }) {
     <div className="p-6 max-w-7xl mx-auto space-y-8">
       
 {/* 1. Bar Chart Section */}
-      <div className="bg-white p-6 rounded-xl shadow-sm ">
+      <div className="bg-white p-6 rounded-xl shadow-sm w-full h-full">
 
         <h2 className="text-xl font-bold text-gray-800 mb-4">Stock Levels</h2>
         <p className="text-sm text-gray-400 mb-4">
           Hover over bars to see Stock & Price • Scroll right to see all products
         </p>
         
-        {/* 👇 SCROLL WRAPPER */}
+        {/*  SCROLL WRAPPER */}
         <div className="w-full overflow-x-auto pb-4 border-b border-gray-100">
           
-          {/* 👇 THE WIDTH ENFORCER */}
+          {/*  THE WIDTH ENFORCER */}
           {/* We set minWidth to ensure it never shrinks below the calculated size */}
           <div style={{ width: chartWidth, minWidth: chartWidth, height: 500 }}>
             
@@ -170,7 +170,7 @@ export default function StockChart({ data }: { data?: any[] }) {
                 
                 <Legend />
                 
-                {/* 👇 CHANGE 3: Use 'stock' as the key */}
+                {/*  CHANGE 3: Use 'stock' as the key */}
                 <Bar dataKey="stock" fill="#3b82f6" radius={[4, 4, 0, 0]} name="Stock Units" />
               </BarChart>
             </ResponsiveContainer>

@@ -109,7 +109,6 @@ export default function TeamPage() {
 
   return (
     <div className="p-8 min-h-screen bg-gray-50/50 dark:bg-gray-900 font-sans">
-     
       <style>{customStyles}</style>
 
       {/* HEADER SECTION */}
@@ -124,9 +123,9 @@ export default function TeamPage() {
         {/* SEARCH BAR */}
         <div className="search-wrapper">
           <div className="search-container">
-            <input 
-              placeholder="Search members..." 
-              className="search-input" 
+            <input
+              placeholder="Search members..."
+              className="search-input"
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -137,19 +136,39 @@ export default function TeamPage() {
 
       {/* CONTENT SECTION */}
       {loading ? (
-        <div className="flex justify-center items-center h-64">
-          <Loader2 className="animate-spin text-blue-500" size={40} />
-        </div>
+        <div style={{
+        height: '80vh', // Matches loading.tsx
+        width: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: '20px'
+      }}>
+        <div style={{
+          border: '4px solid rgba(255, 255, 255, 0.1)',
+          borderTop: '4px solid #3b82f6',
+          borderRadius: '50%',
+          width: '50px',
+          height: '50px',
+          animation: 'spin 1s linear infinite'
+        }} />
+        <p style={{ color: '#94a3b8', fontSize: '1.1rem', fontWeight: '500' }}>
+          Loading Details...
+        </p>
+        <style>{`
+          @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+          }
+        `}</style>
+      </div>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 max-w-7xl mx-auto px-6">
           {filteredMembers.length > 0 ? (
             filteredMembers.map((member) => (
-              
               /* 🟢 USING PURE CSS CLASS */
               <div key={member._id} className="team-card">
-                
-                
-
                 {/* Name */}
                 <h3 className="text-lg font-bold text-gray-900 mb-1">
                   {member.name}
@@ -162,7 +181,6 @@ export default function TeamPage() {
                     {member.email}
                   </span>
                 </div>
-
               </div>
             ))
           ) : (

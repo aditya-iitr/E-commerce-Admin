@@ -31,7 +31,7 @@ export const config = {
     '/', 
     '/login', 
     '/team/:path*', 
-    '/products/:path*',   // 👈 ADD THIS
-    '/analytics/:path*'   // 👈 ADD THIS
+    '/products/:path*',   
+    '/analytics/:path*'   
   ],
 };
