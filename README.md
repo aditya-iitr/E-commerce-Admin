@@ -3,7 +3,7 @@
 A comprehensive, full-stack administrative dashboard built with **Next.js 15 (App Router)**. This application provides real-time analytics, inventory management, and secure authentication for e-commerce administrators.
 
 ## 🚀 Live Demo
-**[View Live Deployment Here](https://your-vercel-link.app)** *(Replace this after deploying)*
+**[View Live Deployment Here](https://e-commerce-admin-navy-seven.vercel.app/login)** 
 
 ## 📖 Project Overview
 
@@ -47,7 +47,7 @@ Follow these steps to run the project locally.
 
 ### 1. Clone the Repository
 
-git clone [https://github.com/yourusername/ecommerce-admin-dashboard.git](https://github.com/yourusername/ecommerce-admin-dashboard.git)
+git clone [https://github.com/aditya-iitr/ecommerce-admin-dashboard.git]
 cd ecommerce-admin-dashboard
 
 ### 2. Install Dependencies
