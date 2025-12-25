@@ -410,6 +410,7 @@ const StyledWrapper = styled.div`
 
   .main-title {
     color: white;
+    font-size: clamp(1.2rem, 5vw, 2rem);
     margin-bottom: 20px;
     font-weight: 900;
     text-transform: uppercase;
@@ -417,7 +418,7 @@ const StyledWrapper = styled.div`
   }
 
   #msform {
-    width: 400px;
+    width: 100%; max-width: 420px; padding: 0 20px;
     margin: 50px auto;
     text-align: center;
     position: relative;
@@ -429,7 +430,7 @@ const StyledWrapper = styled.div`
     border: 0 none;
     border-radius: 3px;
     box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
-    padding: 20px 30px;
+    padding: 20px; 
     box-sizing: border-box;
     width: 100%;
     margin: 0;
@@ -510,7 +511,7 @@ const StyledWrapper = styled.div`
     color: white;
     text-transform: uppercase;
     font-size: 9px;
-    width: 33.33%;
+    flex: 1;
     position: relative;
     text-align: center;
     font-weight: bold;
