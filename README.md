@@ -23,6 +23,7 @@ This project is a **Server-Side Rendered (SSR)** application designed to solve t
 
 ### 🔒 Secure Authentication & Access
 - **Email Verification:** Custom OTP (One-Time Password) system sent via Email.
+- **Email Verification:** To ensure that no any randoms can register for admin i have created in such a way that only people with organisation email or g-suit can register (currently set to .iitr.ac.in).
 - **Duplicate Prevention:** Backend logic prevents re-registration of existing active emails.
 - **Protected Routes:** Middleware ensures only authenticated users can access the dashboard.
 
