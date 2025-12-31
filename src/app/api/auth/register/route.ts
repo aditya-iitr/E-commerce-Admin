@@ -10,9 +10,9 @@ export async function POST(req: Request) {
     const { name, email, password } = await req.json();
 
     // 1. Check for IITR Domain
-    if (!email.endsWith("iitr.ac.in")) {
+    if (!email.endsWith("@gmail.com")) {
       return NextResponse.json(
-        { message: "Access Restricted: Use your @branch.iitr.ac.in email." },
+        { message: "Access Restricted: Use your email ends with- @gmail.com ." },
         { status: 403 }
       );
     }
